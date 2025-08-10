@@ -52,13 +52,15 @@
 
                 <div class="input-stack">
                     <div class="input-email">
-                        <input type="email"  placeholder="Email" required>
+                        <input type="email" id="inputEmail" placeholder="Email" >
                         <i class="fa-solid fa-envelope"></i>
+                        <div id="emailError" class="input-error email">Email can not empty!</div>
                     </div>
 
                     <div class="input-password">
-                        <input type="password"  placeholder="Password" required>
+                        <input type="password" id="inputPassword" placeholder="Password" >
                         <i class="fa-solid fa-lock"></i>
+                        <div id="passwordError" class="input-error email">Password can not empty!</div>
                     </div>
                 
                     <div id="forgot-password">
@@ -68,25 +70,25 @@
 
                 <div class="button-stack">
                     <div class="containerLoginAndGG-GitHub">
-                        <button id="LogIn">Log in</button>
+                        <button type="button" id="LogIn">Log in</button>
                         <div id="divider"><span>Or</span></div>
                     
                         <div class="button-GoogleAndGitHub">
                             <div class="iconsGG">
                                 <img src="assets/icons/google.png" alt="iconGoogle" class="iconGoogle">
-                                <button id="Google">Google</button>
+                                <button type="button" id="Google">Google</button>
                             </div>
 
                             <div class="iconsGitHub">
                                 <img src="assets/icons/github.png" alt="iconGitHub" class="iconGitHub">
-                                <button id="GitHub">GitHub</button>
+                                <button type="button" id="GitHub">GitHub</button>
                             </div>
                         </div>
                     </div>
                     <div class="registration">
                         <div id="accountYet"><a href="#">Have no account yet?</a></div>
                         <div id="button-signUp">
-                            <button id="SignUp">Registration</button>
+                            <button type="submit" id="SignUp">Registration</button>
                         </div>
                     </div>
                 </div>
