@@ -6,13 +6,13 @@
     <title>Sign up Page</title>
     <link rel="stylesheet" href="style.css">
     <!-- Thêm link Font Awesome vào head -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
     <div class="containerDark">
         <div><h1>Simple Sign Up Screen</h1></div>
-        <div class="form">
+        <form id="form">
             <div class="formInterface">
                 <div class="specLogoNew">
                 <div class="imgSpec">
@@ -42,12 +42,8 @@
                     <div id="circle1">
                         <div id="subCircle1"></div>
                     </div>
-                    <div id="circle2">
-                        
-                    </div>
-                    <div id="circle3">
-                        
-                    </div>
+                    <div id="circle2"></div>
+                    <div id="circle3"></div>
                 </div>
             </div>
             
@@ -56,12 +52,12 @@
 
                 <div class="input-stack">
                     <div class="input-email">
-                        <input type="email" placeholder="Email" required>
+                        <input type="email"  placeholder="Email" required>
                         <i class="fa-solid fa-envelope"></i>
                     </div>
 
                     <div class="input-password">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password"  placeholder="Password" required>
                         <i class="fa-solid fa-lock"></i>
                     </div>
                 
@@ -90,12 +86,14 @@
                     <div class="registration">
                         <div id="accountYet"><a href="#">Have no account yet?</a></div>
                         <div id="button-signUp">
-                            <button id="SignUp">Registration</button>
+                            <button type="submit" id="SignUp">Registration</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
+    <!-- Script -->
+     <script src="./script.js"></script>
 </body>
 </html>
