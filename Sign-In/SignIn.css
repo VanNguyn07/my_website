@@ -12,6 +12,8 @@ body {
     font-weight: bold;
     font-style: solid;
     text-align: center;
+    margin: 22px;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
  }
 
  #form {
@@ -184,6 +186,10 @@ outline: 2px solid #6F74DD;
    text-decoration: none;
 }
 
+#forgot-password:hover a {
+   color: #0c18eb;
+}
+
 .button-stack {
    display: flex;
    justify-content: center;
@@ -281,6 +287,9 @@ outline: 2px solid #6F74DD;
    font-size: 16px;
    font-weight: bold;
    text-decoration: none;
+}
+#accountYet:hover a {
+   color: #0c18eb;
 }
 #button-SignUp {
    width: 330px;
