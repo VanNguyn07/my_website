@@ -153,9 +153,9 @@ position: relative;
 outline:none;
 }
 .input-stack input{
-   width: 300px;
+   width: 280px;
    height: 40px;
-   padding-left: 20px;
+   padding-left: 45px;
    border-radius: 15px;
    border: 3px solid #454755;
    font-family:'Times New Roman', Times, serif;
@@ -173,6 +173,8 @@ outline: 2px solid #6F74DD;
    transform: translateY(-50%);
    pointer-events: none;
    color: #828282;
+   margin-right: 275px;
+
 }
 #forgot-password a{
    margin-left: 170px;
@@ -195,7 +197,7 @@ outline: 2px solid #6F74DD;
    flex-direction: column;
    gap: 10px;
 }
-#LogIn {
+#button-LogIn {
    width: 330px;
    height: 40px;
    background-color: #00227B;
@@ -209,6 +211,16 @@ outline: 2px solid #6F74DD;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
    text-transform: uppercase;
 }
+
+#button-LogIn:active{
+   transform: scale(0.95);
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#button-LogIn:hover {
+   background-color: transparent;
+   color: #6F74DD;
+}
 .button-GoogleAndGitHub {
    display: flex;
    justify-content: center;
@@ -216,7 +228,8 @@ outline: 2px solid #6F74DD;
    gap: 28px;
    margin-bottom: 15px;
 }
-#Google, #GitHub {
+
+#button-Google, #button-GitHub {
    width: 150px;
    height: 40px;
    background-color: transparent;
@@ -228,6 +241,19 @@ outline: 2px solid #6F74DD;
    border: 2px solid #828282;
    cursor: pointer;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#button-Google:hover {
+    background: linear-gradient(45deg, #4285F4, #34A853, #FBBC05, #EA4335);
+}
+#button-GitHub:hover {
+    background: linear-gradient(45deg, #24292E, #6F74DD);
+}
+
+#button-Google:active, #button-GitHub:active {
+    transform: scale(0.95);/* thu nhỏ khi nhấn */ 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .iconsGG, .iconsGitHub{
    display: flex;
@@ -256,7 +282,7 @@ outline: 2px solid #6F74DD;
    font-weight: bold;
    text-decoration: none;
 }
-#SignUp {
+#button-SignUp {
    width: 330px;
    height: 40px;
    background-color: transparent;
@@ -268,6 +294,17 @@ outline: 2px solid #6F74DD;
    border-radius: 25px;
    border: 2px solid #828282;
 }
+
+#button-SignUp:active {
+   transform: scale(0.95);
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#button-SignUp:hover {
+   background-color: #00227B;
+   color: #F3F4FC;
+}
+
 #divider {
    font-size: 16px;
    font-family: 'Courier New', Courier, monospace;
@@ -278,6 +315,7 @@ outline: 2px solid #6F74DD;
 .input-error {
    font-size: 16px;
    color: red;
-   margin-left: 15px;
+   margin-left: 22px;
    display: none;
+   position: absolute;
 }
