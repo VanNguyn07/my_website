@@ -11,6 +11,9 @@ const errorPasswordElement = document.getElementById("passwordError");
 const buttonGGElement = document.getElementById("button-Google");
 const buttonGitHubElement = document.getElementById("button-GitHub");
 
+//Lấy ra button registratioin 
+const buttonSignUpElement = document.getElementById("button-SignUp");
+
 // Lấy URl của Sign In gg 
 const urlGGSignIn = "https://accounts.google.com/o/oauth2/v2/auth" +
         "?client_id=YOUR_CLIENT_ID.apps.googleusercontent.com" +
@@ -46,4 +49,9 @@ buttonGGElement.addEventListener("click", function(){
 // Lắng nghe sự kiện click của button GitHub
 buttonGitHubElement.addEventListener("click", function(){
     window.open("https://github.com/login", "_blank");
+})
+
+// Lắng nghe sự kiện click của button Sign Up
+buttonSignUpElement.addEventListener("click", function(){
+    window.location.href = "../Sign-Up/SignUp.html";
 })
