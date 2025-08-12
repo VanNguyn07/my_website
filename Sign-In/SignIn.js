@@ -6,6 +6,7 @@ const inputPasswordElement = document.getElementById("inputPassword");
 // Lấy ra elements error của trang
 const errorEmailElement = document.getElementById("emailError") 
 const errorPasswordElement = document.getElementById("passwordError");
+const errorPassword1Element = document.getElementById("passwordError1");
 
 // Lấy ra button GG và GitHub
 const buttonGGElement = document.getElementById("button-Google");
@@ -13,6 +14,10 @@ const buttonGitHubElement = document.getElementById("button-GitHub");
 
 //Lấy ra button registratioin 
 const buttonSignUpElement = document.getElementById("button-SignUp");
+
+//Lấy ra value từ localStorage
+const savedEmail = localStorage.getItem("email");    
+const savedPassword = localStorage.getItem("password");
 
 // Lấy URl của Sign In gg 
 const urlGGSignIn = "https://accounts.google.com/o/oauth2/v2/auth" +
@@ -27,17 +32,34 @@ form.addEventListener("submit", function(event){
     // ngăn chặn hành động sự kiện load lại trang
     event.preventDefault()
 
+    let valid = true;
     // validate(xác thực) dữ liệu đầu vào 
     if(!inputEmailElement.value){
         errorEmailElement.style.display = "block";
+        valid = false;
     }else {
         errorEmailElement.style.display = "none";
     }
     
     if(!inputPasswordElement.value){
         errorPasswordElement.style.display = "block";
+        valid = false;
     } else {
         errorPasswordElement.style.display = "none";
+    }
+
+    // nếu không có lỗi thì thực hiện đăng nhập
+    if(valid){
+        // Kiểm tra email và password có khớp với dữ liệu đã lưu trong localStorage không
+        if(inputEmailElement.value === savedEmail && inputPasswordElement.value === savedPassword){
+            // Nếu khớp, chuyển hướng đến trang chính
+            window.location.href = "https://vocabenglish.id.vn/";
+        } else {
+            // Nếu không khớp, hiển thị lỗi
+            errorPassword1Element.style.display = "block";
+        }
+    } else {
+        errorPassword1Element.style.display = "none"; // Ẩn lỗi nếu có lỗi khác
     }
 })
 
