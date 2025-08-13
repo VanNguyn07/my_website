@@ -2,6 +2,7 @@
     .containerDark {
         width: 100%;
         margin: 0;
+        height: auto;
     }
 
     h1 {
@@ -12,7 +13,6 @@
         display: block;
         width: 100%;
         height: auto;
-        border-radius: 25px;
     }
     .formInterface {
         width: 100%;
@@ -24,10 +24,11 @@
     }
 
     .formSignUp {
-        width: 393px;
-        height: 530px;
+        width: 98.7%;
+        height: auto;
         border-radius: 25px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        padding-bottom: 20px;
     }
 }
